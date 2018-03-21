@@ -1,0 +1,32 @@
+{
+  "name": "javascript-interview-simple-boilerplate",
+  "version": "1.0.0",
+  "description": "Just a minimal setup for Javascript interviews",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "cover": "npm run test -- --coverage",
+    "cover-report": "open ./coverage/lcov-report/index.html"
+  },
+  "author": "Chris Cinelli",
+  "license": "MIT",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "mockData.js$"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!setup-tests.js"
+    ],
+    "setupTestFrameworkScriptFile": "./setup-tests.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2",
+    "jest": "^22.4.2"
+  }
+}
